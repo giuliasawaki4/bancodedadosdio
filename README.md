@@ -1,6 +1,3 @@
--- Criação do banco de dados (opcional, dependendo do SGBD)
-CREATE DATABASE ecommerce;
-USE ecommerce;
 
 -- Tabela Cliente
 CREATE TABLE clients(
