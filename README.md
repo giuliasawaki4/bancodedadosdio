@@ -5,7 +5,7 @@ CREATE TABLE clients(
     -- ...
 );
 
--- Tabela Cliente PF (Relacionamento 1 para 1 com a tabela cliente)
+-- Tabela Cliente PF 
 CREATE TABLE clients_pf(
     idClientPf INT PRIMARY KEY,
     cpf CHAR(11) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE clients_pf(
     CONSTRAINT fk_client_pf FOREIGN KEY (idClientPf) REFERENCES clients(idClient)
 );
 
--- Tabela Cliente PJ (Relacionamento 1 para 1 com a tabela cliente)
+-- Tabela Cliente PJ 
 CREATE TABLE clients_pj(
     idClientPj INT PRIMARY KEY,
     cnpj CHAR(14) NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE clients_pj(
     CONSTRAINT fk_client_pj FOREIGN KEY (idClientPj) REFERENCES clients(idClient)
 );
 
--- Tabela Pagamento (um cliente pode ter vários pagamentos)
+-- Tabela Pagamento 
 CREATE TABLE payments(
     idPayment INT PRIMARY KEY AUTO_INCREMENT,
     idPaymentClient INT,
